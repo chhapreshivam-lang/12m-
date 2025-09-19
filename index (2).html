@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hotel Rate Calculator</h1>
+    <form onsubmit="event.preventDefault(); calculateRate();">
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" required>
+      
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" required>
+      
+      <label for="rooms">Number of Rooms:</label>
+      <input type="number" id="rooms" min="1" max="25" required>
+      
+      <button type="submit">Calculate</button>
+    </form>
+    
+    <div id="message"></div>
+    <div id="result"></div>
+  </div>
+  <script src="rateCalculator.js"></script>
+</body>
+</html>
